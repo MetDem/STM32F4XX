@@ -25,14 +25,14 @@ int main()
     /* OD ya da PP olabilir external(harici-dışardan) direnç kullanılacaksa OD seçilir
     board üzerindeki buton PP ile kullanılır*/
     GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_DOWN       //.._DOWN  
-    /*PP olarak belirledikten sonra gerekirse Pull-Down ya da Pull-Up ayarlanabilinir.*/
+    /*PP olarak belirledikten sonra gerekirse Pull-Down ya da Pull-Up ayarlanabilinir*/
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;  //.._50-25-2 MHz
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 
 
-    /* Kullanılacak porta göre Clock Buslarını librarydan (.rcc) bakıp yazmak lazım*/
-    /* GPIO_Init fonksiyonu olmadan yapılan ayarlamalar havada kalır.
+    /* Kullanılacak porta göre Clock Buslarını librarydan (.rcc) bakıp yazmak lazım */
+    /* GPIO_Init fonksiyonu olmadan yapılan ayarlamalar havada kalır */
 
 }
 
