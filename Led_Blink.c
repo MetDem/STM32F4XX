@@ -26,7 +26,7 @@ int main()
 
     GPIO_SetBits(GPIOD, GPIO_Pin_12);     // Logic High 3.3V
     GPIO_SetBits(GPIOD, GPIO_Pin_13); 
-    GPIO_ResetBits();   // Logic Zero 0V
+    // GPIO_ResetBits();   // Logic Zero 0V
 
 
     /* Kullanılacak porta göre Clock Buslarını librarydan (.rcc) bakıp yazmak lazım*/
