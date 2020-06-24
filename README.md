@@ -25,15 +25,10 @@ uint32_t	Unsigned	32	4	  0	232 − 1 = 4,294,967,295
 int64_t	  Signed	  64	8	  −263 = −9,223,372,036,854,775,808	263 − 1 = 9,223,372,036,854,775,807
 uint64_t	Unsigned	64	8	  0	264 − 1 = 18,446,744,073,709,551,615
 
-Değişkenin başına const koyduğumuz zaman derleyiciye deriz ki, bak bilader bu değişkenin değeri asla değişmeyecek. (flash’a ya da hard diske ya da genel adıyla NVM’ye(non-volatile memory) koyar.)
-
 Değişkene durduğun yerde dur diyeceğiz. static uint32_t (Adresi degismiyor)
-
-Peki ya bizim değişkenimiz öyle ansızın değişebilmeliyse? Ram’e erişmek görece çok hızlı olsa da sonuçta işlemcinin dışındaki bir bellekten söz ediyoruz ve haberleşme için bir miktar zamanı paşa paşa kaybediyoruz. Öyle bir imkan olsa ki çok acil durumlar için daha hızlı bir çözüm olsa. Var efendim, işlemcinin register’ları var. Biz derleyiciye şunu diyebiliriz. “Abicim eğer yer varsa lütfen bi zahmet bunu işlemcinin register’inda sakla. Yoksa da optimize filan etme kolayda tut lazım olunca hemen çekelim.” Derdinizi anlatmayı bilirseniz derleyici dileğinizi yerine getirir. Bunun için ona şunu yazmalısınız:
 
 volatile uint32_t med=1997;
 
-Bunları karıştırmak mümkün. Misal static const dediğinizde iki isteğiniz aynı anda gerçekleştirilir. Ancaak birbiriyle çatışan istekler aynı anda kullanılamaz. Mesela const volatile diyemezsiniz 
 
 
 
